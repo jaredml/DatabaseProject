@@ -1,18 +1,46 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Sign-In</title>
-  <link rel="stylesheet" type="text/css" href="loginpage.css">
+    <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
+    <link href="assets/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+        body { background: url(assets/bglight.png); }
+        .hero-unit { background-color: #fff; }
+        .center { display: block; margin: 0 auto; }
+    </style>
 </head>
-<body id="body-color">
-  <div id="Sign-In">
-    <fieldset style="width:100%"><legend>LOG-IN HERE</legend>
-  <form method="POST" action="loginpage.php">
-    User <br><input type="text" name="user" size="40"><br>
-    Password <br><input type="password" name="pass" size="40"><br>
-    <input id="button" type="submit" name="submit" value="Log-In">
-  </form>
-</fieldset>
+<body>
+<div class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand">Member login</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav pull-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Log In <strong class="caret"></strong></a>
+            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                <form action="loginpage.php" method="post">
+                    Username:<br />
+                    <input type="text" name="username" value="" />
+                    <br /><br />
+                    Password:<br />
+                    <input type="password" name="password" value="" />
+                    <br /><br />
+                    <input type="submit" class="btn btn-info" value="Login" />
+                </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>
